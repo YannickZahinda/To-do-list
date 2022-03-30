@@ -25,3 +25,15 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@YannickZahinda](https://github.com/YannickZahinda)
 - Twitter: [@ZahindaY](https://twitter.com/ZahindaY)
 - LinkedIn: [Yannick MULIKUZA](https://linkedin.com/in/linkedinhandle)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
