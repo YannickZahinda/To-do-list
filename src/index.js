@@ -1,28 +1,31 @@
 import './style.css';
-import TodoTaskStorage from '../modules/index.js';
-import { displayTask } from '../modules/app.js';
-import { Addtask } from '../modules/app.js';
-import { taskAddRemove } from '../modules/app.js';
-import { inputTask } from '../modules/app.js'
+import {
+  renderTasks,
+  addTask as Add,
+  editTask as Edit,
+} from '../modules/app.js';
 
+class Task {
+  constructor(taskArray) {
+    this.taskArray = taskArray;
+  }
 
-document.getElementById('add-task').addEventListener('click', () => {
-  displayTask.taskAdd();
-  inputTask.value = '';
-  TodoTaskStorage.setToStorage();
-})
+  render = () => {
+    renderTasks(this.taskArray);
+    Add(this.addtask, this.taskArray);
+    Edit(this.taskArray, this.addtask);
+  };
 
-// document.getElementById('myTaksArray').addEventListener('click', (event) => {
-//   const isButton = event.target.nodeName === 'BUTTON';
-//   if (!isButton) return;
-//   taskAddRemove.removeByIndex(event.target.value);
-//   displayTask.taskAdd();
-// });
+  addtask = (data) => {
+    if (data) {
+      this.taskArray.push(data);
+      localStorage.setItem('taskArray', JSON.stringify(this.taskArray));
+    } else {
+      localStorage.setItem('taskArray', JSON.stringify(this.taskArray));
+    }
+  };
+}
 
-
-
-// window.addEventListener('load', () => {
-//   const preservedTask = JSON.parse(localStorage.getItem('taskInfo'));
-//   const inputTask = document.getElementById('add-to-list-input');
-//   inputTask.value = preservedTask.description;
-// })
+const task = new Task(JSON.parse(localStorage.getItem('taskArray')) || []);
+task.render();
+task.addtask();
