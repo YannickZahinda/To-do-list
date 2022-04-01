@@ -22,7 +22,7 @@ body {
   padding: 30px;
 }
 
-.input-task{
+.input-task {
   display: flex;
   justify-content: space-between;
 }
@@ -66,11 +66,11 @@ body {
   justify-content: space-between;
 }
 
-.trash-icon{
+.trash-icon {
   width: 17px;
   height: 17px;
 }
 
-.plus-icon{
+.plus-icon {
   vertical-align: middle;
 }
