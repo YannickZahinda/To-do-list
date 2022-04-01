@@ -17,6 +17,8 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "src/index.js",
+    "modules/"
   ]
 }
