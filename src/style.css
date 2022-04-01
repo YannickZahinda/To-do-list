@@ -74,3 +74,21 @@ body {
 .plus-icon {
   vertical-align: middle;
 }
+
+.input-item {
+  padding: 15px;
+  border: none;
+  background-color: rgb(236, 234, 234);
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+#plus-add-icon {
+  border: none;
+  padding: 5px;
+  background-color: #fff;
+}
+
+#plus-add-icon:hover {
+  cursor: progress;
+}
