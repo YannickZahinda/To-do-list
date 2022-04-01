@@ -7,7 +7,7 @@ HTML, CSS, Javascript, Webpack
 
 # Live Demo
 
-[link to my to-do list]()
+[link to my to-do list]( https://yannickzahinda.github.io/To-do-list/)
 
 ## Getting Started
 

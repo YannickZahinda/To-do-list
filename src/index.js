@@ -1,35 +1,31 @@
 import './style.css';
+import {
+  renderTasks,
+  addTask as Add,
+  editTask as Edit,
+} from '../modules/app.js';
 
-const toDoList = document.querySelector('.todo-list');
-const myTodoTasks = [
-  {
-    Description: 'Learning to code',
-    Completed: false,
-    index: 1,
-  },
-  {
-    Description: 'Learning webpack',
-    Completed: true,
-    index: 2,
-  },
-  {
-    Description: 'Taking weekly quiz',
-    Completed: false,
-    index: 3,
-  },
-  {
-    Description: 'Achieve module one',
-    Completed: true,
-    index: 4,
-  },
-];
-
-const toDoData = () => {
-  for (let task = 0; task < myTodoTasks.length; task += 1) {
-    toDoList.innerHTML += `
-        <li class="task"><span><input type="checkbox" id="checkbox"/></span> &nbsp; &nbsp; ${myTodoTasks[task].Description}<li/>
-        `;
+class Task {
+  constructor(taskArray) {
+    this.taskArray = taskArray;
   }
-};
 
-toDoData();
+  render = () => {
+    renderTasks(this.taskArray);
+    Add(this.addtask, this.taskArray);
+    Edit(this.taskArray, this.addtask);
+  };
+
+  addtask = (data) => {
+    if (data) {
+      this.taskArray.push(data);
+      localStorage.setItem('taskArray', JSON.stringify(this.taskArray));
+    } else {
+      localStorage.setItem('taskArray', JSON.stringify(this.taskArray));
+    }
+  };
+}
+
+const task = new Task(JSON.parse(localStorage.getItem('taskArray')) || []);
+task.render();
+task.addtask();
