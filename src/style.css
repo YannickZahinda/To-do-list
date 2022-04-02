@@ -93,6 +93,6 @@ body {
   cursor: progress;
 }
 
-.completed{
+.completed {
   text-decoration: line-through;
 }
