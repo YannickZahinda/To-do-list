@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d614fc8c85.js" crossorigin="anonymous"></script>
     <title>To do list</title>
-<script defer src="main.js"></script></head>
+    <script defer src="main.js"></script><script defer src="main.js"></script></head>
+</head>
+
 <body>
     <main class="wrapper">
         <div class="to-do-container">
             <h1 class="to-do-heading">Today's to do</h1>
-            <div class="input-task"><input type="text" placeholder="Add to your list..." id="add-to-list-input"><div><i class="fa fa-plus" id="add-task" aria-hidden="true"></i></div></div>
+            <form class="input-task">
+                <input type="text" placeholder="Add to your list..." id="add-to-list-input">
+                <button type="submit" id="plus-add-icon"><i class="fa fa-plus" id="add-task" aria-hidden="true"></i></button>
+            </form>
             <ul class="todo-list"></ul>
             <div class="clear-btn"><button id="clear-btn" type="button">Clear all completed</button></div>
         </div>
     </main>
 </body>
+
 </html>

@@ -92,3 +92,7 @@ body {
 #plus-add-icon:hover {
   cursor: progress;
 }
+
+.completed {
+  text-decoration: line-through;
+}

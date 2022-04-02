@@ -5,7 +5,7 @@ const renderTasks = (taskArray) => {
   taskArray.forEach((task) => {
     taskelement += `<li id='${task.index}' class="task">
     <div>
-    <input type="checkbox" id="checkbox"/>&nbsp; &nbsp;
+    <input type="checkbox" id="${task.index}"/>&nbsp; &nbsp;
     <input class="input-item" type="text" id="${task.index}" value="${task.description}">
     </div>
     <i class="fa fa-trash" aria-hidden="true"></i><li/>`;
